@@ -62,8 +62,8 @@ footer{background:#110b08;border-color:#3c2a1e;color:#a99783}footer .brand{color
 
 @media (max-width: 620px) {
   .hero-photo img {
-    height: 55vh;
-    min-height: 320px;
+    height: auto;
+min-height: 0;
   }
 
   .hero-copy {
