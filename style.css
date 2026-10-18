@@ -41,13 +41,13 @@ footer{background:#110b08;border-color:#3c2a1e;color:#a99783}footer .brand{color
 }
 
 .hero-photo img {
-    display: block;
-    width: 100%;
-    height: auto;
-    min-height: 0;
-    object-fit: contain;
-    object-position: center 65%;
-    box-shadow: none;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
+  box-shadow: none;
 }
 
 .hero-photo figcaption {
