@@ -50,23 +50,12 @@ footer{background:#110b08;border-color:#3c2a1e;color:#a99783}footer .brand{color
   box-shadow: none;
 }
 
-.hero-photo figcaption {
-  padding: 10px 3%;
-}
-
-.hero-copy {
-  order: 2;
-  padding: 55px 7% 65px;
-  max-width: 1000px;
-}
-
-@media (max-width: 620px) {
-  .hero-photo img {
-    height: 55vh;
-    min-height: 320px;
-  }
-
-  .hero-copy {
-    padding: 38px 6% 45px;
-  }
+.hero-photo img {
+  display: block;
+  width: 100%;
+  height: min(68vh, 720px);
+  min-height: 380px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: none;
 }
