@@ -87,3 +87,18 @@ min-height: 0;
     object-fit: contain;
   }
 }
+
+/* Preserve full photographs in the portfolio */
+.gallery.editorial-gallery .gallery-item img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+.gallery.editorial-gallery .photo-button {
+  height: auto;
+  aspect-ratio: auto;
+  overflow: visible;
+}
