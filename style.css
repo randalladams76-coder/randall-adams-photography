@@ -58,4 +58,34 @@ footer{background:#110b08;border-color:#3c2a1e;color:#a99783}footer .brand{color
   object-fit: cover;
   object-position: center;
   box-shadow: none;
+} 
+
+/* FINAL HERO ORDER */
+.hero {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 0;
+}
+
+.hero-photo {
+  order: -1;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-photo img {
+  display: block;
+  width: 100%;
+  height: min(68vh, 720px);
+  min-height: 380px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: none;
+}
+
+.hero-copy {
+  order: 2;
+  padding: 60px 7% 70px;
 }
