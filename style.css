@@ -72,14 +72,7 @@ min-height: 0;
 }
 
 
-/* Desktop portfolio gallery layout */
-@media (min-width: 900px) {
-  .editorial-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-    align-items: start;
-  }
+
 
   .editorial-gallery figure {
     width: 100%;
