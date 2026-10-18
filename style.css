@@ -22,7 +22,8 @@ footer{background:#110b08;border-color:#3c2a1e;color:#a99783}footer .brand{color
 .lightbox{background:rgba(13,8,6,.97)}
 @media(max-width:620px){.nav{background:#1b120e;border-color:#4b382c}.hero{background:radial-gradient(ellipse at 70% 40%,#4b2e1f 0%,#241711 48%,#17100d 100%);padding-top:35px}.hero-photo img{height:390px;filter:saturate(.82) sepia(.12)}.statement,.portrait-feature,.about{background:#241812}}
 
-/* FULL-WIDTH HERO — OTIS INSPIRED */
+
+/* FULL-WIDTH EDITORIAL HERO */
 
 .hero {
   display: flex;
@@ -33,22 +34,10 @@ footer{background:#110b08;border-color:#3c2a1e;color:#a99783}footer .brand{color
 }
 
 .hero-photo {
-  order: -1;
-  width: 100vw;
-  margin: 0 0 0 calc(50% - 50vw);
-  padding: 0;
-}
-
-.hero-photo img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.hero-photo {
-  order: 2;
+  order: 1;
   width: 100%;
   margin: 0;
+  padding: 0;
 }
 
 .hero-photo img {
@@ -62,7 +51,13 @@ footer{background:#110b08;border-color:#3c2a1e;color:#a99783}footer .brand{color
 }
 
 .hero-photo figcaption {
-  padding: 10px 7%;
+  padding: 10px 3%;
+}
+
+.hero-copy {
+  order: 2;
+  padding: 55px 7% 65px;
+  max-width: 1000px;
 }
 
 @media (max-width: 620px) {
