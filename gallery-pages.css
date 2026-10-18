@@ -1,0 +1,22 @@
+/* Editorial category galleries */
+.gallery-page-main{padding:clamp(48px,8vw,100px) 9% 90px;background:#17100d;color:#eee2d1}
+.gallery-page-kicker{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:#c69a70;margin:0 0 18px}
+.gallery-page-title{font-family:'Playfair Display',Georgia,serif;font-size:clamp(44px,7vw,82px);font-weight:400;letter-spacing:-.045em;line-height:1.05;margin:0}
+.gallery-page-intro{max-width:520px;color:#c0ad99;font-size:13px;line-height:1.95;margin:22px 0 42px}
+.gallery-page-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 24px;align-items:start}
+.gallery-page-item{margin:0;min-width:0}
+.gallery-page-item .photo-button{display:block;width:100%;height:auto;aspect-ratio:auto;border:0;padding:0;background:#2b1d15;overflow:hidden;cursor:zoom-in}
+.gallery-page-item .photo-button img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;filter:saturate(.82) sepia(.1)}
+.gallery-page-item figcaption{padding-top:12px;color:#c69a70;font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+.gallery-page-note{margin-top:54px;border-top:1px solid #4b382c;padding-top:22px;color:#a99783;font-size:12px;line-height:1.9;max-width:600px}
+.gallery-page-actions{display:flex;gap:24px;flex-wrap:wrap;margin-top:26px}
+.gallery-page-actions a{font-size:10px;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid #7f614a;padding-bottom:8px;color:#e6d4bf}
+.gallery-page-header{padding:0 6.2%;height:94px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(202,164,124,.23);background:#17100d;color:#eee2d1}
+.gallery-page-header .brand{display:flex;flex-direction:column;line-height:1.1;letter-spacing:.15em}
+.gallery-page-header .brand span{font-size:15px;font-weight:400;letter-spacing:.2em}
+.gallery-page-header .brand small{font-size:8px;letter-spacing:.42em;margin-top:8px;color:#c5ad94}
+.gallery-page-header nav{display:flex;gap:28px}
+.gallery-page-header nav a{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#d6c4b0}
+.gallery-page-footer{padding:24px 6.2%;display:flex;justify-content:space-between;gap:20px;border-top:1px solid #3c2a1e;color:#a99783;font-size:8px;letter-spacing:.14em}
+.gallery-page-footer a{color:#eee2d1}
+@media(max-width:620px){.gallery-page-header{height:76px;padding:0 6%}.gallery-page-header nav{gap:14px}.gallery-page-header nav a{font-size:9px}.gallery-page-main{padding:48px 6% 65px}.gallery-page-intro{margin-bottom:30px}.gallery-page-grid{grid-template-columns:1fr;gap:28px}.gallery-page-footer{padding:22px 6%;flex-wrap:wrap}}
