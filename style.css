@@ -213,3 +213,12 @@ footer > span {
   .hero h1 { font-size: clamp(42px, 11vw, 60px); }
   .hero-intro { font-size: 12px; margin: 16px 0 18px; max-width: 340px; }
 }
+
+
+/* One-line hero headline only */
+.hero-copy { width: 90%; }
+.hero h1 { white-space: nowrap; font-size: clamp(30px, 5.1vw, 76px); }
+@media (max-width: 620px) {
+  .hero-copy { width: 92%; }
+  .hero h1 { white-space: nowrap; font-size: clamp(22px, 6.8vw, 42px); letter-spacing: -.055em; }
+}
