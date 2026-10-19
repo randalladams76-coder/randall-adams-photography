@@ -21,3 +21,14 @@
 .gallery-page-footer{padding:24px 6.2%;display:flex;justify-content:space-between;gap:20px;border-top:1px solid #3c2a1e;color:#a99783;font-size:8px;letter-spacing:.14em}
 .gallery-page-footer a{color:#eee2d1}
 @media(max-width:620px){.gallery-page-header{height:76px;padding:0 6%}.gallery-page-header nav{gap:14px}.gallery-page-header nav a{font-size:9px}.gallery-page-main{padding:48px 6% 65px}.gallery-page-intro{margin-bottom:30px}.gallery-page-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 12px}.gallery-page-item .photo-button{aspect-ratio:3 / 4}.gallery-page-footer{padding:22px 6%;flex-wrap:wrap}}
+
+
+/* Refined mobile captions: quieter spacing and more natural wrapping */
+@media (max-width: 620px) {
+  .gallery-page-item figcaption {
+    font-size: 8px;
+    letter-spacing: .10em;
+    line-height: 1.6;
+    padding-top: 10px;
+  }
+}
