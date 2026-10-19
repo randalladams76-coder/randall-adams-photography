@@ -371,3 +371,38 @@ footer > span {
   .about-editorial .about-copy .eyebrow { font-size: 8px; letter-spacing: .14em; }
   .about-editorial .underlink { font-size: 11px; }
 }
+
+
+/* Mobile About section: stack portrait and copy to prevent cramped side-by-side text */
+@media (max-width: 620px) {
+  .about-editorial {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    padding: 48px 7%;
+  }
+  .about-editorial .about-image-left {
+    width: min(100%, 260px);
+    aspect-ratio: 3 / 4;
+    margin: 0 auto;
+  }
+  .about-editorial .about-image-right {
+    display: none;
+  }
+  .about-editorial .about-copy {
+    max-width: 100%;
+    text-align: left;
+  }
+  .about-editorial .about-copy h2 {
+    font-size: clamp(32px, 8.5vw, 40px);
+    line-height: 1.12;
+    margin: 10px 0 20px;
+  }
+  .about-editorial .about-copy p:not(.eyebrow) {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .about-editorial .about-copy .eyebrow {
+    font-size: 8px;
+    letter-spacing: .16em;
+  }
+}
