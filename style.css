@@ -406,3 +406,13 @@ footer > span {
     letter-spacing: .16em;
   }
 }
+
+
+/* Mobile hero: keep the whole family in frame */
+@media (max-width: 620px) {
+  .hero-photo img {
+    object-fit: contain;
+    object-position: center center;
+    background: #17100d;
+  }
+}
