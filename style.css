@@ -455,3 +455,33 @@ footer > span {
     line-height: 1.12;
   }
 }
+
+
+/* Remove the oversized blank band above the homepage hero image on mobile */
+@media (max-width: 620px) {
+  .hero {
+    height: auto;
+    min-height: 0;
+  }
+  .hero-photo {
+    position: relative;
+    inset: auto;
+    height: auto;
+  }
+  .hero-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    object-fit: contain;
+    object-position: center;
+  }
+  .hero-copy {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    width: 100%;
+    padding: 28px 2% 34px;
+  }
+}
