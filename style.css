@@ -532,3 +532,14 @@ footer > span {
     padding-top: 42px;
   }
 }
+
+
+/* Desktop homepage hero: reveal more of the family's lower bodies */
+@media (min-width: 621px) {
+  .hero {
+    min-height: clamp(620px, 78vw, 900px);
+  }
+  .hero-photo img {
+    object-position: center 68%;
+  }
+}
