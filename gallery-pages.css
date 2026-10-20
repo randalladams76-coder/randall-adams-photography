@@ -34,22 +34,22 @@
 }
 
 
-/* Family gallery: preserve each photograph's natural proportions */
-.gallery-page-grid .gallery-page-item .photo-button {
+/* Family gallery only: preserve each photograph's natural proportions */
+.family-gallery-grid .gallery-page-item .photo-button {
   aspect-ratio: auto;
   height: auto;
   overflow: visible;
   background: transparent;
 }
-.gallery-page-grid .gallery-page-item .photo-button img {
+.family-gallery-grid .gallery-page-item .photo-button img {
   display: block;
   width: 100%;
   height: auto;
   object-fit: contain;
 }
 
-/* Wide landscape photographs span the full gallery width */
-.gallery-page-grid .gallery-page-item:has(img[src*="family-hero"],
+/* Wide family photographs span the full gallery width */
+.family-gallery-grid .gallery-page-item:has(img[src*="family-hero"],
   img[src*="family-outdoor-bench-portrait"],
   img[src*="family-outdoor-portrait"],
   img[src*="family-outdoor-laughing"],
@@ -58,9 +58,9 @@
   grid-column: 1 / -1;
 }
 
-/* Keep portrait photographs side by side on desktop and mobile */
+/* Keep family portraits side by side on desktop and mobile */
 @media (max-width: 620px) {
-  .gallery-page-grid .gallery-page-item .photo-button {
+  .family-gallery-grid .gallery-page-item .photo-button {
     aspect-ratio: auto;
   }
 }
