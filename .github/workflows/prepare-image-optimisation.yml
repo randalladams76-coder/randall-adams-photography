@@ -1,0 +1,83 @@
+name: Prepare website image optimisation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  optimise:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install image tools
+        run: python -m pip install Pillow
+
+      - name: Optimise JPEG photographs on a separate branch
+        run: |
+          cat > /tmp/optimise_images.py <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageOps
+          import os
+
+          root = Path(".")
+          image_paths = []
+          for path in root.rglob("*"):
+              if not path.is_file() or ".git" in path.parts:
+                  continue
+              if path.suffix.lower() not in {".jpg", ".jpeg"}:
+                  continue
+              if any(part.startswith(".") for part in path.parts):
+                  continue
+              image_paths.append(path)
+
+          changed = 0
+          saved = 0
+          for path in image_paths:
+              try:
+                  before = path.stat().st_size
+                  with Image.open(path) as source:
+                      image = ImageOps.exif_transpose(source).convert("RGB")
+                      image.thumbnail((2200, 2800), Image.Resampling.LANCZOS)
+                      temp = path.with_name(path.name + ".optimising")
+                      image.save(temp, "JPEG", quality=86, optimize=True, progressive=True)
+                  after = temp.stat().st_size
+                  if after < before:
+                      temp.replace(path)
+                      changed += 1
+                      saved += before - after
+                  else:
+                      temp.unlink(missing_ok=True)
+              except Exception as exc:
+                  print(f"Skipped {path}: {exc}")
+          print(f"Processed {len(image_paths)} JPEGs; improved {changed}; saved {saved/1024/1024:.2f} MiB.")
+          PY
+          python /tmp/optimise_images.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          BRANCH="image-optimisation-review"
+          git checkout -B "$BRANCH"
+          git add -- '*.jpg' '*.jpeg' '*.JPG' '*.JPEG'
+          if git diff --cached --quiet; then
+            echo "No image size reductions to commit."
+            exit 0
+          fi
+          git commit -m "Optimise website JPEG photographs"
+          git push --force origin "$BRANCH"
+
+      - name: Open review pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr create --base main --head image-optimisation-review --title "Review optimised website photographs" --body "This branch reduces JPEG file sizes while preserving the existing filenames and image links. The original files remain unchanged on main. Please review the visual quality and image-size changes before merging."
