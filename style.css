@@ -543,3 +543,11 @@ footer > span {
     object-position: center 68%;
   }
 }
+
+
+/* SOCIAL LINKS */
+.footer-social{display:flex;align-items:center;gap:16px}
+.footer-social a{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;color:#c69a70;border:1px solid rgba(198,154,112,.45);border-radius:50%;transition:color .2s,border-color .2s,background .2s}
+.footer-social a:hover{color:#17100d;background:#c69a70;border-color:#c69a70}
+.footer-social svg{display:block;width:14px;height:14px;fill:currentColor}
+@media(max-width:620px){.footer-social{margin-left:auto;gap:12px}}
