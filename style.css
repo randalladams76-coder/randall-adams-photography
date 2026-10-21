@@ -565,3 +565,8 @@ footer > span {
     line-height: 1.85;
   }
 }
+
+/* Professional email displayed in the contact section */
+.contact-email { margin: 12px 0 0; font-size: 13px; letter-spacing: .03em; }
+.contact-email a { color: #e3c19e; border-bottom: 1px solid #8b6b4e; padding-bottom: 3px; }
+.contact-email a:hover { color: #fff0df; }
