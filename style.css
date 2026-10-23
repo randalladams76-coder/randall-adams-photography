@@ -737,3 +737,19 @@ footer > span {
 .portrait-feature .underlink{font-size:12px;margin-top:14px}
 @media(max-width:850px){.portrait-feature h2{font-size:clamp(34px,4.3vw,48px)}.portrait-feature-copy>p:not(.eyebrow){font-size:14px}}
 @media(max-width:620px){.portrait-feature h2{white-space:normal;font-size:48px}.portrait-feature-copy .eyebrow{font-size:10px}.portrait-feature-copy>p:not(.eyebrow){font-size:14px}.portrait-feature-copy>p.portrait-feature-lead{font-size:19px}}
+
+
+/* Family section editorial image and typography */
+.families-editorial{grid-template-columns:1fr;gap:38px}
+.families-editorial .families-image{height:clamp(340px,43vw,600px);overflow:hidden;background:#241812}
+.families-editorial .families-image img{object-position:center 48%;filter:saturate(.86) sepia(.08)}
+.families-editorial .families-content{display:grid;grid-template-columns:.9fr 1.1fr;column-gap:12%;align-items:start}
+.families-editorial .families-heading{padding-top:8px}
+.families-editorial .families-copy{padding-top:8px}
+.families-editorial .families-copy p{font-size:15px;line-height:1.95;margin:0 0 18px;max-width:580px}
+.families-editorial .families-heading .eyebrow{font-size:11px;letter-spacing:.2em;margin-bottom:24px}
+.families-editorial .families-heading h2{font-size:clamp(42px,4.7vw,64px)}
+.families-editorial .families-copy .underlink{font-size:12px;margin-top:8px}
+.families-editorial .family-rule{margin-top:2px}
+@media(max-width:850px){.families-editorial .families-content{column-gap:7%}.families-editorial .families-copy p{font-size:14px}}
+@media(max-width:620px){.families-editorial{gap:28px}.families-editorial .families-image{height:300px;margin:0 -6%;}.families-editorial .families-content{grid-template-columns:1fr;row-gap:22px}.families-editorial .families-heading h2{font-size:46px}.families-editorial .families-heading .eyebrow{font-size:10px}.families-editorial .families-copy{padding-top:0}.families-editorial .families-copy p{font-size:14px;line-height:1.9}.families-editorial .family-rule{margin-top:8px}}
