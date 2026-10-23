@@ -753,3 +753,9 @@ footer > span {
 .families-editorial .family-rule{margin-top:2px}
 @media(max-width:850px){.families-editorial .families-content{column-gap:7%}.families-editorial .families-copy p{font-size:14px}}
 @media(max-width:620px){.families-editorial{gap:28px}.families-editorial .families-image{height:300px;margin:0 -6%;}.families-editorial .families-content{grid-template-columns:1fr;row-gap:22px}.families-editorial .families-heading h2{font-size:46px}.families-editorial .families-heading .eyebrow{font-size:10px}.families-editorial .families-copy{padding-top:0}.families-editorial .families-copy p{font-size:14px;line-height:1.9}.families-editorial .family-rule{margin-top:8px}}
+
+
+/* Show the full family photograph without cropping heads or legs */
+.families-editorial .families-image{height:auto;max-height:none;overflow:visible}
+.families-editorial .families-image img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center;filter:saturate(.86) sepia(.08)}
+@media(max-width:620px){.families-editorial .families-image{height:auto;max-height:none;margin:0 -6%;overflow:visible}.families-editorial .families-image img{height:auto;max-height:none;object-fit:contain}}
