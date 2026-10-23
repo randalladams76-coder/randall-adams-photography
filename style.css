@@ -792,3 +792,9 @@ footer > span {
   .families-editorial .families-overlay-details{grid-template-columns:1fr;row-gap:16px;padding-top:10px}
   .families-editorial .families-overlay-details p{font-size:15px;line-height:1.85}
 }
+
+
+/* Keep supporting family copy together beneath the desktop photo */
+.families-editorial .families-overlay-details{display:block;max-width:760px;padding-top:22px}
+.families-editorial .families-overlay-details p{max-width:720px;margin:0 0 16px;font-size:15px;line-height:1.9}
+@media(max-width:620px){.families-editorial .families-overlay-details{display:block;max-width:none;padding-top:10px}.families-editorial .families-overlay-details p{font-size:15px;line-height:1.85;margin-bottom:16px}}
