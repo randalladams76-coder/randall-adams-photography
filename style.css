@@ -777,3 +777,18 @@ footer > span {
 .families-overlay .family-rule{margin-top:8px}
 @media(max-width:850px){.families-overlay-copy{width:48%}.families-overlay-copy h2{font-size:clamp(34px,4.4vw,48px)}.families-overlay-intro{font-size:13px}.families-editorial .families-overlay-details{gap:7%}}
 @media(max-width:620px){.families-editorial.families-overlay{gap:24px}.families-editorial.families-overlay .families-image{height:auto;overflow:hidden;margin:0 -6%}.families-editorial.families-overlay .families-image:after{background:linear-gradient(90deg,rgba(17,11,8,.84) 0%,rgba(17,11,8,.58) 55%,rgba(17,11,8,.08) 100%)}.families-overlay-copy{left:7%;top:50%;width:54%;transform:translateY(-50%)}.families-overlay-copy .eyebrow{font-size:8px;letter-spacing:.13em;margin-bottom:13px}.families-overlay-copy h2{font-size:clamp(26px,7.2vw,38px);margin-bottom:13px}.families-overlay-intro{font-size:10px;line-height:1.55;margin-bottom:12px}.families-overlay-copy .underlink{font-size:9px}.families-editorial .families-overlay-details{grid-template-columns:1fr;row-gap:14px}.families-editorial .families-overlay-details p{font-size:14px;line-height:1.85}.families-overlay .family-rule{margin-top:4px}}
+
+
+/* On mobile, keep family copy separate from the photograph */
+@media(max-width:620px){
+  .families-editorial.families-overlay .families-image{height:auto;overflow:visible;margin:0 -6%}
+  .families-editorial.families-overlay .families-image:after{display:none}
+  .families-editorial.families-overlay .families-image img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+  .families-editorial.families-overlay .families-overlay-copy{position:static;transform:none;width:auto;padding:25px 0 0;color:#f1e1cf}
+  .families-editorial.families-overlay .families-overlay-copy .eyebrow{font-size:10px;letter-spacing:.18em;margin-bottom:14px}
+  .families-editorial.families-overlay .families-overlay-copy h2{font-size:clamp(38px,10vw,48px);line-height:1.04;margin:0 0 18px}
+  .families-editorial.families-overlay .families-overlay-intro{max-width:unset;font-size:15px;line-height:1.8;margin:0 0 18px;color:#cbb8a5}
+  .families-editorial.families-overlay .families-overlay-copy .underlink{font-size:11px;margin-top:4px}
+  .families-editorial .families-overlay-details{grid-template-columns:1fr;row-gap:16px;padding-top:10px}
+  .families-editorial .families-overlay-details p{font-size:15px;line-height:1.85}
+}
