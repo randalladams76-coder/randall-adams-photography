@@ -819,3 +819,12 @@ footer > span {
   }
 }
 
+/* Signature logo in the site header and footer */
+.brand-logo{display:flex;flex:0 0 auto;width:clamp(150px,16vw,210px);height:auto;line-height:0;letter-spacing:0}
+.brand-logo img{display:block;width:100%;height:auto;object-fit:contain}
+footer .brand-logo{width:clamp(140px,14vw,185px)}
+@media(max-width:620px){
+  .header .brand-logo{width:150px}
+  footer .brand-logo{width:145px}
+}
+
