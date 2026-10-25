@@ -798,3 +798,24 @@ footer > span {
 .families-editorial .families-overlay-details{display:block;max-width:760px;padding-top:22px}
 .families-editorial .families-overlay-details p{max-width:720px;margin:0 0 16px;font-size:15px;line-height:1.9}
 @media(max-width:620px){.families-editorial .families-overlay-details{display:block;max-width:none;padding-top:10px}.families-editorial .families-overlay-details p{font-size:15px;line-height:1.85;margin-bottom:16px}}
+
+/* Match the highlighted Perennial Portraits and Family body copy to About */
+.portrait-feature-copy > p:not(.eyebrow):not(.portrait-feature-lead) {
+  font-size: clamp(16px, 1.25vw, 18px);
+  line-height: 1.9;
+}
+.families-editorial .families-overlay-details p {
+  font-size: clamp(16px, 1.25vw, 18px);
+  line-height: 1.9;
+}
+@media (max-width: 620px) {
+  .portrait-feature-copy > p:not(.eyebrow):not(.portrait-feature-lead) {
+    font-size: 16px;
+    line-height: 1.85;
+  }
+  .families-editorial .families-overlay-details p {
+    font-size: 16px;
+    line-height: 1.85;
+  }
+}
+
