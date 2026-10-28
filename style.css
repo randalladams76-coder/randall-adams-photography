@@ -821,37 +821,6 @@ footer > span {
 
 
 
-/* Perennial Portraits header signature */
-.header .perennial-brand {
-  align-items: flex-start;
-  gap: 0;
-  letter-spacing: 0;
-  flex-shrink: 0;
-}
-.header .perennial-brand span {
-  font-family: 'Allura', cursive;
-  font-size: clamp(34px, 3.4vw, 46px);
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: .92;
-  color: #f3e4ce;
-  white-space: nowrap;
-}
-.header .perennial-brand small {
-  align-self: center;
-  font-size: 8px;
-  letter-spacing: .16em;
-  line-height: 1.2;
-  margin-top: 7px;
-  color: #f3e4ce;
-  white-space: nowrap;
-}
-@media (max-width: 620px) {
-  .header .perennial-brand span { font-size: 34px; }
-  .header .perennial-brand small { font-size: 6px; letter-spacing: .12em; margin-top: 6px; }
-}
-
-
 /* Actual transparent Perennial Portraits signature logo */
 .header .perennial-brand {
   display: flex;
