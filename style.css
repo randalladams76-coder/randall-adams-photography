@@ -847,3 +847,89 @@ footer > span {
     max-height: 54px;
   }
 }
+
+
+/* Client reviews */
+.reviews-section {
+  padding: 100px 9%;
+  background: #17100d;
+  color: #eee2d1;
+}
+.reviews-heading {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+.reviews-heading .eyebrow {
+  color: #c59a70;
+  margin-bottom: 20px;
+}
+.reviews-heading h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.08;
+  font-weight: 400;
+  letter-spacing: -.045em;
+}
+.reviews-heading h2 em { color: #c59a70; }
+.reviews-heading > p:last-child {
+  max-width: 540px;
+  margin: 22px auto 0;
+  color: #c0ad99;
+  font-size: 14px;
+  line-height: 1.9;
+}
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.review-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 32px;
+  border: 1px solid #4b382c;
+  background: rgba(255,255,255,.018);
+}
+.review-card blockquote {
+  white-space: pre-line;
+  margin: 0 0 28px;
+  color: #eadbc9;
+  font-family: var(--serif);
+  font-size: clamp(17px, 1.55vw, 21px);
+  line-height: 1.65;
+  font-weight: 400;
+}
+.review-author {
+  margin: auto 0 4px;
+  color: #f0e1cf;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .04em;
+}
+.review-author a { border-bottom: 1px solid #8e6d4d; padding-bottom: 3px; }
+.review-author a:hover { color: #d8b18a; }
+.review-context {
+  margin: 8px 0 0;
+  color: #b39e88;
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+@media (max-width: 850px) {
+  .reviews-section { padding: 80px 7%; }
+  .review-card { padding: 26px; }
+}
+@media (max-width: 620px) {
+  .reviews-section { padding: 64px 6%; }
+  .reviews-heading { margin-bottom: 32px; text-align: left; }
+  .reviews-heading h2 { font-size: 43px; }
+  .reviews-heading > p:last-child { margin: 17px 0 0; font-size: 13px; }
+  .reviews-grid { grid-template-columns: 1fr; gap: 14px; }
+  .review-card { padding: 24px; }
+  .review-card blockquote { font-size: 19px; }
+}
