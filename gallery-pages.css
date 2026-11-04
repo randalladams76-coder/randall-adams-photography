@@ -96,3 +96,31 @@
   }
   .events-gallery-empty p:last-child { font-size: 12px; }
 }
+
+
+/* Events gallery: two-column grid with landscape photographs shown at their natural proportions */
+.events-gallery-grid .gallery-page-item .photo-button {
+  aspect-ratio: auto;
+  height: auto;
+  overflow: hidden;
+  background: #2b1d15;
+}
+.events-gallery-grid .gallery-page-item .photo-button img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+@media (max-width: 620px) {
+  .events-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 12px;
+  }
+  .events-gallery-grid .gallery-page-item .photo-button {
+    aspect-ratio: auto;
+  }
+  .events-gallery-grid .gallery-page-item .photo-button img {
+    height: auto;
+  }
+}
