@@ -48,24 +48,40 @@
   object-fit: contain;
 }
 
-/* Wide family photographs span the full gallery width */
-.family-gallery-grid .gallery-page-item:has(img[src*="family-hero"],
-  img[src*="family-outdoor-bench-portrait"],
-  img[src*="family-outdoor-portrait"],
-  img[src*="family-outdoor-laughing"],
-  img[src*="family-walking-away"],
-  img[src*="family-walking-together"]) {
-  grid-column: 1 / -1;
+/* Family gallery: keep every photograph in the same two-column stack */
+.family-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 34px 24px;
+  align-items: start;
 }
-
-/* Keep family portraits side by side on desktop and mobile */
+.family-gallery-grid .gallery-page-item {
+  grid-column: auto;
+  min-width: 0;
+  align-self: start;
+}
+.family-gallery-grid .gallery-page-item .photo-button {
+  aspect-ratio: auto;
+  height: auto;
+  overflow: hidden;
+  background: transparent;
+}
+.family-gallery-grid .gallery-page-item .photo-button img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 @media (max-width: 620px) {
-  .family-gallery-grid .gallery-page-item .photo-button {
-    aspect-ratio: auto;
+  .family-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 12px;
+  }
+  .family-gallery-grid .gallery-page-item {
+    grid-column: auto;
   }
 }
-
-
+ 
 /* Events gallery empty state while new photographs are being prepared */
 .events-gallery-empty {
   max-width: 720px;
