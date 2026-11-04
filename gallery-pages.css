@@ -64,3 +64,35 @@
     aspect-ratio: auto;
   }
 }
+
+
+/* Events gallery empty state while new photographs are being prepared */
+.events-gallery-empty {
+  max-width: 720px;
+  margin: 34px 0 20px;
+  padding: 54px 36px;
+  border: 1px solid #4b382c;
+  background: linear-gradient(135deg, rgba(197,154,112,.08), rgba(255,255,255,.012));
+  text-align: center;
+}
+.events-gallery-empty-title {
+  margin: 0 0 12px;
+  color: #eee2d1;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(25px, 3.2vw, 36px);
+  line-height: 1.25;
+}
+.events-gallery-empty p:last-child {
+  max-width: 490px;
+  margin: 0 auto;
+  color: #c0ad99;
+  font-size: 13px;
+  line-height: 1.9;
+}
+@media (max-width: 620px) {
+  .events-gallery-empty {
+    padding: 40px 22px;
+    margin-top: 24px;
+  }
+  .events-gallery-empty p:last-child { font-size: 12px; }
+}
