@@ -2,6 +2,11 @@ name: Prepare website image optimisation
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/prepare-image-optimisation.yml"
 
 permissions:
   contents: write
