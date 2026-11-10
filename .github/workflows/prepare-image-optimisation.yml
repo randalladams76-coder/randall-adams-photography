@@ -56,7 +56,11 @@ jobs:
                       image = ImageOps.exif_transpose(source).convert("RGB")
                       image.thumbnail((2200, 2800), Image.Resampling.LANCZOS)
                       temp = path.with_name(path.name + ".optimising")
-                      image.save(temp, "JPEG", quality=86, optimize=True, progressive=True)
+                      save_options = {"quality": 86, "optimize": True, "progressive": True}
+                  icc_profile = source.info.get("icc_profile")
+                  if icc_profile:
+                      save_options["icc_profile"] = icc_profile
+                  image.save(temp, "JPEG", **save_options)
                   after = temp.stat().st_size
                   if after < before:
                       temp.replace(path)
@@ -73,7 +77,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           BRANCH="image-optimisation-review"
           git checkout -B "$BRANCH"
-          git add -- '*.jpg' '*.jpeg' '*.JPG' '*.JPEG'
+          git add -u
           if git diff --cached --quiet; then
             echo "No image size reductions to commit."
             exit 0
